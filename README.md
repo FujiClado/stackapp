@@ -1,22 +1,9 @@
 ## Environment Variables
 
-- REDIS_HOST
+- CACHING_SERVER
   
   - Redis host details / ip or service name.
 
-- REDIS_PORT 
-
-  - Default : 6379 
-  - Portnumber of the redis port.
-
-- REDIS_CACHE
-  - Default : 300
-  - Time to specify how long the redis should maintain the cached records.
-
-
-- FLASK_PORT
-  - Default : 8080
-  - Default port number of the flask server.
 
 - IPSTACK_KEY
   - ipstack api token.
@@ -53,10 +40,8 @@ docker run \
 --network appnet \
 --restart always \
 -p 80:8080 \
--e REDIS_HOST=redis \
--e REDIS_CACHE=300 \
--e FLASK_PORT=8080 \
--e IPSTACK_KEY='0454ac34a0a6697c43af345b393360f5' \
-fujikomalan/ipstackapp:1
+-e CACHING_SERVER="redis" \
+-e IPSTACK_KEY="c8fe...f93e......bcfb4f9d0b89" \
+fujikomalan/ipstack:latest 
 
 ```
