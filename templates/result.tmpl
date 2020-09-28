@@ -1,0 +1,21 @@
+<html>
+<body>
+
+   <head>
+   <title>result</title>
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+   </head>
+
+
+  <center><p> Ipaddress Country Information </p></center>
+
+
+  
+  <h2><center> Country :  {{ country }}  </center></h2>
+  <h2><center> Hostname : {{ hostname }} </center></h2>
+  <h2><center> cached : {{ redis_status }} </center></h2>
+
+  <a href="/"><center>Home</center></a>
+
+</body>
+</html>
